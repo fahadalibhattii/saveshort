@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveShort | Download Instagram Reels</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+    <!-- ***************Hero Section******************** -->
+    <nav class="navbar navbar-expand-lg py-4 px-md-0 px-3">
+        <div class="container gx-0">
+            <a href="#" class="logo">
+                <img src="./images/logo.png" alt="">
+            </a>
+            <!-- ************************** -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <svg fill="#000000" class="navbar-toggler-icon" viewBox="0 0 32 32" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <title>bars</title>
+                        <path
+                            d="M2 9.249h28c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0h-28c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0zM30 14.75h-28c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h28c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0zM30 22.75h-28c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h28c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0z">
+                        </path>
+                    </g>
+                </svg>
+            </button>
+            <!-- ********************** -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <div class="language-picker language-picker--flags js-language-picker"
+                        data-trigger-class="li4-btn li4-btn--subtle js-tab-focus">
+                        <form action="" class="language-picker__form">
+                            <label for="language-picker-select">Select your language</label>
+
+                            <select name="language-picker-select" id="language-picker-select">
+                                <option lang="de" value="deutsch">Deutsch</option>
+                                <option lang="en" value="english" selected>English</option>
+                                <option lang="fr" value="francais">Français</option>
+                                <option lang="it" value="italiano">Italiano</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+
+                </div>
+            </div>
+            <!-- ********************** -->
+            <div class="language-picker language-picker--flags js-language-picker d-none d-md-none d-lg-block"
+                data-trigger-class="li4-btn li4-btn--subtle js-tab-focus">
+                <form action="" class="language-picker__form">
+                    <label for="language-picker-select">Select your language</label>
+
+                    <select name="language-picker-select" id="language-picker-select">
+                        <option lang="de" value="deutsch">Deutsch</option>
+                        <option lang="en" value="english" selected>English</option>
+                        <option lang="fr" value="francais">Français</option>
+                        <option lang="it" value="italiano">Italiano</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- ***************Hero Section******************** -->
+    <div class="Hero">
+        <div class="Hero_overlay">
+            <div class="container gx-0">
+                <div class="row gx-0">
+                    <div class="col-md-1 gx-0"></div>
+                    <div class="col-md-10 gx-0">
+                        <div
+                            class="hero_col text-center justify-content-center align-items-center d-flex flex-column text-white">
+                            <h1>Instagram Downloader</h1>
+                            <p class="py-3">Video, photo, reels, story, IGTV, post are downloaded from a link that has a
+                                different
+                                format</p>
+                            <!-- ********************** -->
+                            <div class="hero_input1 d-md-block w-100">
+                                <div class="input-group bg-white">
+                                    <input type="text" id="textInput" class="form-control me-2 border-0 hero_input ps-4"
+                                        placeholder="Insert Instagram link here" oninput="toggleButtons()">
+                                    <div class="btns py-1 py-md-0">
+                                        <button class=" border-0 btn1 mx-1" type="button" id="pasteBtn"><svg
+                                                viewBox="0 0 24 24" fill="none" class="sgv1"
+                                                xmlns="http://www.w3.org/2000/svg" stroke="#333333">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.144"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M12 0C11.2347 0 10.6293 0.125708 10.1567 0.359214C9.9845 0.44429 9.82065 0.544674 9.68861 0.62717L9.59036 0.688808C9.49144 0.751003 9.4082 0.803334 9.32081 0.853848C9.09464 0.984584 9.00895 0.998492 9.00053 0.999859C8.99983 0.999973 9.00019 0.999859 9.00053 0.999859C7.89596 0.999859 7 1.89543 7 3H6C4.34315 3 3 4.34315 3 6V20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V6C21 4.34315 19.6569 3 18 3H17C17 1.89543 16.1046 1 15 1C15.0003 1 15.0007 1.00011 15 1C14.9916 0.998633 14.9054 0.984584 14.6792 0.853848C14.5918 0.80333 14.5086 0.751004 14.4096 0.688804L14.3114 0.62717C14.1793 0.544674 14.0155 0.44429 13.8433 0.359214C13.3707 0.125708 12.7653 0 12 0ZM16.7324 5C16.3866 5.5978 15.7403 6 15 6H9C8.25972 6 7.61337 5.5978 7.26756 5H6C5.44772 5 5 5.44772 5 6V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V6C19 5.44772 18.5523 5 18 5H16.7324ZM11.0426 2.15229C11.1626 2.09301 11.4425 2 12 2C12.5575 2 12.8374 2.09301 12.9574 2.15229C13.0328 2.18953 13.1236 2.24334 13.2516 2.32333L13.3261 2.37008C13.43 2.43542 13.5553 2.51428 13.6783 2.58539C13.9712 2.75469 14.4433 3 15 3V4H9V3C9.55666 3 10.0288 2.75469 10.3217 2.58539C10.4447 2.51428 10.57 2.43543 10.6739 2.37008L10.7484 2.32333C10.8764 2.24334 10.9672 2.18953 11.0426 2.15229Z"
+                                                        fill="#333333"></path>
+                                                </g>
+                                            </svg> Paste</button>
+                                        <button class="border-0 btn1" type="button" id="clearBtn" onclick="clearText()">
+                                            <svg fill="#000000" viewBox="0 0 1024 1024" t="1569683368540" class="sgv1"
+                                                version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9723"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <defs>
+                                                        <style type="text/css"></style>
+                                                    </defs>
+                                                    <path
+                                                        d="M899.1 869.6l-53-305.6H864c14.4 0 26-11.6 26-26V346c0-14.4-11.6-26-26-26H618V138c0-14.4-11.6-26-26-26H432c-14.4 0-26 11.6-26 26v182H160c-14.4 0-26 11.6-26 26v192c0 14.4 11.6 26 26 26h17.9l-53 305.6c-0.3 1.5-0.4 3-0.4 4.4 0 14.4 11.6 26 26 26h723c1.5 0 3-0.1 4.4-0.4 14.2-2.4 23.7-15.9 21.2-30zM204 390h272V182h72v208h272v104H204V390z m468 440V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H416V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H202.8l45.1-260H776l45.1 260H672z"
+                                                        p-id="9724"></path>
+                                                </g>
+                                            </svg> Clear</button>
+                                        <button class="border-0 btn2" type="button">Download</button>
+                                    </div>
+                                </div>
+                                <!-- ********************** -->
+                            </div>
+                            <!-- ********************** -->
+                            <!-- <div class="hero_input2 w-100 d-block d-block d-md-none">
+                                <div class="input-group bg-white">
+                                    <input type="text" id="textInput" class="form-control me-2 border-0 hero_input ps-4"
+                                        placeholder="Insert Instagram link here" oninput="toggleButtons()">
+                                    <button class="border-0 btn1" type="button" id="pasteBtn"><svg viewBox="0 0 24 24"
+                                            fill="none" class="sgv1" xmlns="http://www.w3.org/2000/svg"
+                                            stroke="#333333">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke="#CCCCCC" stroke-width="0.144"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12 0C11.2347 0 10.6293 0.125708 10.1567 0.359214C9.9845 0.44429 9.82065 0.544674 9.68861 0.62717L9.59036 0.688808C9.49144 0.751003 9.4082 0.803334 9.32081 0.853848C9.09464 0.984584 9.00895 0.998492 9.00053 0.999859C8.99983 0.999973 9.00019 0.999859 9.00053 0.999859C7.89596 0.999859 7 1.89543 7 3H6C4.34315 3 3 4.34315 3 6V20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V6C21 4.34315 19.6569 3 18 3H17C17 1.89543 16.1046 1 15 1C15.0003 1 15.0007 1.00011 15 1C14.9916 0.998633 14.9054 0.984584 14.6792 0.853848C14.5918 0.80333 14.5086 0.751004 14.4096 0.688804L14.3114 0.62717C14.1793 0.544674 14.0155 0.44429 13.8433 0.359214C13.3707 0.125708 12.7653 0 12 0ZM16.7324 5C16.3866 5.5978 15.7403 6 15 6H9C8.25972 6 7.61337 5.5978 7.26756 5H6C5.44772 5 5 5.44772 5 6V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V6C19 5.44772 18.5523 5 18 5H16.7324ZM11.0426 2.15229C11.1626 2.09301 11.4425 2 12 2C12.5575 2 12.8374 2.09301 12.9574 2.15229C13.0328 2.18953 13.1236 2.24334 13.2516 2.32333L13.3261 2.37008C13.43 2.43542 13.5553 2.51428 13.6783 2.58539C13.9712 2.75469 14.4433 3 15 3V4H9V3C9.55666 3 10.0288 2.75469 10.3217 2.58539C10.4447 2.51428 10.57 2.43543 10.6739 2.37008L10.7484 2.32333C10.8764 2.24334 10.9672 2.18953 11.0426 2.15229Z"
+                                                    fill="#333333"></path>
+                                            </g>
+                                        </svg> Paste</button>
+                                    <button class="border-0 btn1" type="button" id="clearBtn" onclick="clearText()">
+                                        <svg fill="#000000" viewBox="0 0 1024 1024" t="1569683368540" class="sgv1"
+                                            version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9723"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <defs>
+                                                    <style type="text/css"></style>
+                                                </defs>
+                                                <path
+                                                    d="M899.1 869.6l-53-305.6H864c14.4 0 26-11.6 26-26V346c0-14.4-11.6-26-26-26H618V138c0-14.4-11.6-26-26-26H432c-14.4 0-26 11.6-26 26v182H160c-14.4 0-26 11.6-26 26v192c0 14.4 11.6 26 26 26h17.9l-53 305.6c-0.3 1.5-0.4 3-0.4 4.4 0 14.4 11.6 26 26 26h723c1.5 0 3-0.1 4.4-0.4 14.2-2.4 23.7-15.9 21.2-30zM204 390h272V182h72v208h272v104H204V390z m468 440V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H416V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H202.8l45.1-260H776l45.1 260H672z"
+                                                    p-id="9724"></path>
+                                            </g>
+                                        </svg> Clear</button>
+                                </div>
+                                <button class="border-0 btn2 w-100 mt-3" type="button">Download</button>
+                            </div> -->
+                            <!-- ********************** -->
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- *********************************** -->
+        <div class="Features py-5 my-5">
+            <div class="container gx-0">
+                <div class="row py-4 gx-0">
+                    <div class="col-md-1 gx-0"></div>
+                    <div class="col-md-10 gx-0">
+                        <div class="Feature_head text-center">
+                            <h1>Instagram Downloader <span span class="span_1">Features</span></h1>
+                            <p class="">Below you can see the main functionalities of the service Instagram
+                                Downloader.
+                                Among them the following should be highlighted:</p>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row gx-0 g-4 py-3">
+                    <div class="col-md-6 gx-0">
+                        <div class="Features_col1">
+                            <h3>Instagram Photo Downloader</h3>
+                            <p>Quickly view and download images from Instagram
+                                anonymously in their original resolution, in reduced size and
+                                for free. Downloaded photos will always be at your
+                                fingertips.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 gx-0">
+                        <div class="Features_col3 Features_col1">
+                            <h3>Instagram Video/Reels Downloader</h3>
+                            <p>Our service is based on a system of anonymous bots that download all the videos from
+                                Instagram that
+                                you like on the provided links in HD quality from both the post and from the
+                                stories.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 gx-0">
+                        <div class="Features_col2">
+                            <h3>Carousel / Album Downloader IG</h3>
+                            <p>Download all photos and videos from albums and carousels to Instagram. You can have
+                                multiple
+                                types of content in a single post.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 gx-0">
+                        <div class="Features_col2">
+                            <h3>IGTV Downloader</h3>
+                            <p>Start downloading your favorite IGTV videos in HD quality. It's free and easy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- *********************************** -->
+        <div class="Download">
+            <div class="container gx-0">
+                <div class="row py-4 gx-0">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <div class="Feature_head text-center">
+                            <h1><span class="span_2">How to Download</span> From Instagram?</h1>
+                            <p class="">To start downloading a video or photo from Instagram, you need to follow a
+                                few
+                                simple steps
+                                one by one:</p>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row gx-0 g-4 py-3">
+                    <div class="col-md-6 gx-0 col-lg-4">
+                        <div class="download_col1">
+                            <!-- ************************* -->
+                            <div class="row align-items-center">
+                                <div class="col-9">
+                                    <h3>Copy the URL</h3>
+                                </div>
+                                <div class="col-3">
+                                    <h2>1</h2>
+                                </div>
+                                <!-- ************************* -->
+                            </div>
+                            <!-- ************************* -->
+                            <p>You will be redirected to a page where you can select the size and resolution
+                                (quality)
+                                of
+                                the requested resource. If you have traffic limitations, this is where you can
+                                select an image or video of a size smaller
+                                than the original.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 gx-0 col-lg-4">
+                        <div class="download_col1">
+                            <!-- ************************* -->
+                            <div class="row align-items-center">
+                                <div class="col-9">
+                                    <h3>Insert the link</h3>
+                                </div>
+                                <div class="col-3">
+                                    <h2>2</h2>
+                                </div>
+                                <!-- ************************* -->
+                            </div>
+                            <!-- ************************* -->
+                            <p>You will be redirected to a page where you can select the size and resolution
+                                (quality)
+                                of
+                                the requested resource. If you have traffic limitations, this is where you can
+                                select an image or video of a size smaller
+                                than the original.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 gx-0 col-lg-4">
+                        <div class="download_col1">
+                            <!-- ************************* -->
+                            <div class="row align-items-center">
+                                <div class="col-9">
+                                    <h3>Click the
+                                        «Download»</h3>
+                                </div>
+                                <div class="col-3">
+                                    <h2>3</h2>
+                                </div>
+                                <!-- ************************* -->
+                            </div>
+                            <!-- ************************* -->
+                            <p>You will be redirected to a page where you can select the size and resolution
+                                (quality)
+                                of
+                                the requested resource. If you have traffic limitations, this is where you can
+                                select an image or video of a size smaller
+                                than the original.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4 pt-md-5 text-center pb-2 px-4 px-md-0">
+                    <button class="border-0 btn2 w-25" type="button"
+                        onclick="document.getElementById('textInput').focus()">GO TO DOWNLOAD</button>
+                </div>
+            </div>
+        </div>
+        <!-- *********************************** -->
+        <div class="Questions">
+            <div class="container gx-0">
+                <h3 class="text-center">Frequently Asked Questions</h3>
+                <div class="row gx-0 py-4">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Why Use SnapSave To Download Facebook Video?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is
+                                    intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                    accordion
+                                    body.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Why Use SnapSave To Download Facebook Video?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is
+                                    intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                    accordion
+                                    body. Let's imagine this being filled with some actual content.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Why Use SnapSave To Download Facebook Video?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is
+                                    intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                    accordion
+                                    body. Nothing more exciting happening here in terms of content, but just filling
+                                    up
+                                    the
+                                    space to make it look, at least at first glance, a bit more representative of
+                                    how
+                                    this
+                                    would look in a real-world application.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="#flush-collapseFour">
+                                    Why Use SnapSave To Download Facebook Video?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is
+                                    intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                    accordion
+                                    body. Nothing more exciting happening here in terms of content, but just filling
+                                    up
+                                    the
+                                    space to make it look, at least at first glance, a bit more representative of
+                                    how
+                                    this
+                                    would look in a real-world application.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="#flush-collapseFive">
+                                    Why Use SnapSave To Download Facebook Video?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is
+                                    intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                    accordion
+                                    body. Nothing more exciting happening here in terms of content, but just filling
+                                    up
+                                    the
+                                    space to make it look, at least at first glance, a bit more representative of
+                                    how
+                                    this
+                                    would look in a real-world application.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- *********************************** -->
+        <footer class="footer bg-black text-white py-3 px-2 px-md-0 py-md-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-4 py-4 py-md-0">
+                        <img src="../images/logo2.png" alt="">
+                        <p class="pt-3">www.saveshot.in</p>
+                    </div>
+                    <div class="col-md-4 py-4 py-md-0">
+                        <h3 class="pb-3">Contact Us</h3>
+                        <h5 class="py-2">Email: contact@example.com</h5>
+                        <h5 class="py-2">Phone: 123-456-7890</h5>
+                    </div>
+
+                    <div class="col-md-4 py-4 py-md-0">
+                        <h3 class="pb-3">Services</h3>
+                        <h5 class="py-2">Instagram Photo Downloader</h5>
+                        <h5 class="py-2">Instagram Story Downloader</h5>
+                        <h5 class="py-2">Instagram IGTV Downloader</h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- *********************************** -->
+        <!-- *********************************** -->
+</body>
+<!-- *********************************** -->
+<script>
+    // utility functions
+    if (!Util) function Util() { };
+
+    Util.addClass = function (el, className) {
+        var classList = className.split(' ');
+        el.classList.add(classList[0]);
+        if (classList.length > 1) Util.addClass(el, classList.slice(1).join(' '));
+    };
+
+    Util.removeClass = function (el, className) {
+        var classList = className.split(' ');
+        el.classList.remove(classList[0]);
+        if (classList.length > 1) Util.removeClass(el, classList.slice(1).join(' '));
+    };
+
+    Util.toggleClass = function (el, className, bool) {
+        if (bool) Util.addClass(el, className);
+        else Util.removeClass(el, className);
+    };
+
+    Util.moveFocus = function (element) {
+        if (!element) element = document.getElementsByTagName('body')[0];
+        element.focus();
+        if (document.activeElement !== element) {
+            element.setAttribute('tabindex', '-1');
+            element.focus();
+        }
+    };
+
+    Util.getIndexInArray = function (array, el) {
+        return Array.prototype.indexOf.call(array, el);
+    };
+
+    (function () {
+        var LanguagePicker = function (element) {
+            this.element = element;
+            this.select = this.element.getElementsByTagName('select')[0];
+            this.options = this.select.getElementsByTagName('option');
+            this.selectedOption = getSelectedOptionText(this);
+            this.pickerId = this.select.getAttribute('id');
+            this.trigger = false;
+            this.dropdown = false;
+            this.firstLanguage = false;
+            // dropdown arrow inside the button element
+            this.arrowSvgPath = '<svg viewBox="0 0 16 16"><polygon points="3,5 8,11 13,5 "></polygon></svg>';
+            this.globeSvgPath = '<svg viewBox="0 0 16 16"><path d="M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8s8-3.6,8-8S12.4,0,8,0z M13.9,7H12c-0.1-1.5-0.4-2.9-0.8-4.1 C12.6,3.8,13.6,5.3,13.9,7z M8,14c-0.6,0-1.8-1.9-2-5H10C9.8,12.1,8.6,14,8,14z M6,7c0.2-3.1,1.3-5,2-5s1.8,1.9,2,5H6z M4.9,2.9 C4.4,4.1,4.1,5.5,4,7H2.1C2.4,5.3,3.4,3.8,4.9,2.9z M2.1,9H4c0.1,1.5,0.4,2.9,0.8,4.1C3.4,12.2,2.4,10.7,2.1,9z M11.1,13.1 c0.5-1.2,0.7-2.6,0.8-4.1h1.9C13.6,10.7,12.6,12.2,11.1,13.1z"></path></svg>';
+
+            initLanguagePicker(this);
+            initLanguagePickerEvents(this);
+        };
+
+        function initLanguagePicker(picker) {
+            // create the HTML for the custom dropdown element
+            picker.element.insertAdjacentHTML('beforeend', initButtonPicker(picker) + initListPicker(picker));
+
+            // save picker elements
+            picker.dropdown = picker.element.getElementsByClassName('language-picker__dropdown')[0];
+            picker.languages = picker.dropdown.getElementsByClassName('language-picker__item');
+            picker.firstLanguage = picker.languages[0];
+            picker.trigger = picker.element.getElementsByClassName('language-picker__button')[0];
+        };
+
+        function initLanguagePickerEvents(picker) {
+            // make sure to add the icon class to the arrow dropdown inside the button element
+            var svgs = picker.trigger.getElementsByTagName('svg');
+            Util.addClass(svgs[0], 'li4-icon');
+            Util.addClass(svgs[1], 'li4-icon');
+            // language selection in dropdown
+            // ⚠️ Important: you need to modify this function in production
+            initLanguageSelection(picker);
+
+            // click events
+            picker.trigger.addEventListener('click', function () {
+                toggleLanguagePicker(picker, false);
+            });
+            // keyboard navigation
+            picker.dropdown.addEventListener('keydown', function (event) {
+                if (event.keyCode && event.keyCode == 38 || event.key && event.key.toLowerCase() == 'arrowup') {
+                    keyboardNavigatePicker(picker, 'prev');
+                } else if (event.keyCode && event.keyCode == 40 || event.key && event.key.toLowerCase() == 'arrowdown') {
+                    keyboardNavigatePicker(picker, 'next');
+                }
+            });
+        };
+
+        function toggleLanguagePicker(picker, bool) {
+            var ariaExpanded;
+            if (bool) {
+                ariaExpanded = bool;
+            } else {
+                ariaExpanded = picker.trigger.getAttribute('aria-expanded') == 'true' ? 'false' : 'true';
+            }
+            picker.trigger.setAttribute('aria-expanded', ariaExpanded);
+            if (ariaExpanded == 'true') {
+                picker.firstLanguage.focus(); // fallback if transition is not supported
+                picker.dropdown.addEventListener('transitionend', function cb() {
+                    picker.firstLanguage.focus();
+                    picker.dropdown.removeEventListener('transitionend', cb);
+                });
+                // place dropdown
+                placeDropdown(picker);
+            }
+        };
+
+        function placeDropdown(picker) {
+            var triggerBoundingRect = picker.trigger.getBoundingClientRect();
+            Util.toggleClass(picker.dropdown, 'language-picker__dropdown--right', (window.innerWidth < triggerBoundingRect.left + picker.dropdown.offsetWidth));
+            Util.toggleClass(picker.dropdown, 'language-picker__dropdown--up', (window.innerHeight < triggerBoundingRect.bottom + picker.dropdown.offsetHeight));
+        };
+
+        function checkLanguagePickerClick(picker, target) { // if user clicks outside the language picker -> close it
+            if (!picker.element.contains(target)) toggleLanguagePicker(picker, 'false');
+        };
+
+        function moveFocusToPickerTrigger(picker) {
+            if (picker.trigger.getAttribute('aria-expanded') == 'false') return;
+            if (document.activeElement.closest('.language-picker__dropdown') == picker.dropdown) picker.trigger.focus();
+        };
+
+        function initButtonPicker(picker) { // create the button element -> picker trigger
+            // check if we need to add custom classes to the button trigger
+            var customClasses = picker.element.getAttribute('data-trigger-class') ? ' ' + picker.element.getAttribute('data-trigger-class') : '';
+
+            var button = '<button class="language-picker__button' + customClasses + '" aria-label="' + picker.select.value + ' ' + picker.element.getElementsByTagName('label')[0].textContent + '" aria-expanded="false" aria-controls="' + picker.pickerId + '-dropdown">';
+            button = button + '<span aria-hidden="true" class="language-picker__label language-picker__flag language-picker__flag--' + picker.select.value + '">' + picker.globeSvgPath + '<em>' + picker.selectedOption + '</em>';
+            button = button + picker.arrowSvgPath + '</span>';
+            return button + '</button>';
+        };
+
+        function initListPicker(picker) { // create language picker dropdown
+            var list = '<div class="language-picker__dropdown" aria-describedby="' + picker.pickerId + '-description" id="' + picker.pickerId + '-dropdown">';
+            list = list + '<p class="li4-sr-only" id="' + picker.pickerId + '-description">' + picker.element.getElementsByTagName('label')[0].textContent + '</p>';
+            list = list + '<ul class="language-picker__list" role="listbox">';
+            for (var i = 0; i < picker.options.length; i++) {
+                var selected = picker.options[i].selected ? ' aria-selected="true"' : '',
+                    language = picker.options[i].getAttribute('lang');
+                list = list + '<li><a lang="' + language + '" hreflang="' + language + '" href="' + getLanguageUrl(picker.options[i]) + '"' + selected + ' role="option" data-value="' + picker.options[i].value + '" class="language-picker__item language-picker__flag language-picker__flag--' + picker.options[i].value + '"><span>' + picker.options[i].text + '</span></a></li>';
+            };
+            return list;
+        };
+
+        function getSelectedOptionText(picker) { // used to initialize the label of the picker trigger button
+            var label = '';
+            if ('selectedIndex' in picker.select) {
+                label = picker.options[picker.select.selectedIndex].text;
+            } else {
+                label = picker.select.querySelector('option[selected]').text;
+            }
+            return label;
+        };
+
+        function getLanguageUrl(option) {
+
+            return '#';
+        };
+
+        function initLanguageSelection(picker) {
+            picker.element.getElementsByClassName('language-picker__list')[0].addEventListener('click', function (event) {
+                var language = event.target.closest('.language-picker__item');
+                if (!language) return;
+
+                if (language.hasAttribute('aria-selected') && language.getAttribute('aria-selected') == 'true') {
+
+                    event.preventDefault();
+                    picker.trigger.setAttribute('aria-expanded', 'false'); // 
+                } else {
+
+                    event.preventDefault();
+                    picker.element.getElementsByClassName('language-picker__list')[0].querySelector('[aria-selected="true"]').removeAttribute('aria-selected');
+                    language.setAttribute('aria-selected', 'true');
+                    picker.trigger.getElementsByClassName('language-picker__label')[0].setAttribute('class', 'language-picker__label language-picker__flag language-picker__flag--' + language.getAttribute('data-value'));
+                    picker.trigger.getElementsByClassName('language-picker__label')[0].getElementsByTagName('em')[0].textContent = language.textContent;
+                    picker.trigger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        };
+
+        function keyboardNavigatePicker(picker, direction) {
+            var index = Util.getIndexInArray(picker.languages, document.activeElement);
+            index = (direction == 'next') ? index + 1 : index - 1;
+            if (index < 0) index = picker.languages.length - 1;
+            if (index >= picker.languages.length) index = 0;
+            Util.moveFocus(picker.languages[index]);
+        };
+
+        //initialize the LanguagePicker objects
+        var languagePicker = document.getElementsByClassName('js-language-picker');
+        if (languagePicker.length > 0) {
+            var pickerArray = [];
+            for (var i = 0; i < languagePicker.length; i++) {
+                (function (i) { pickerArray.push(new LanguagePicker(languagePicker[i])); })(i);
+            }
+
+            // listen for key events
+            window.addEventListener('keyup', function (event) {
+                if (event.keyCode && event.keyCode == 27 || event.key && event.key.toLowerCase() == 'escape') {
+                    // close language picker on 'Esc'
+                    pickerArray.forEach(function (element) {
+                        moveFocusToPickerTrigger(element); // if focus is within dropdown, move it to dropdown trigger
+                        toggleLanguagePicker(element, 'false'); // close dropdown
+                    });
+                }
+            });
+            // close language picker when clicking outside it
+            window.addEventListener('click', function (event) {
+                pickerArray.forEach(function (element) {
+                    checkLanguagePickerClick(element, event.target);
+                });
+            });
+        }
+    }());
+</script>
+<!-- *********************************** -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+<!-- *********************************** -->
+<script>
+    function toggleButtons() {
+        var textInput = document.getElementById("textInput");
+        var clearBtn = document.getElementById("clearBtn");
+        var pasteBtn = document.getElementById("pasteBtn");
+
+        if (textInput.value !== "") {
+            clearBtn.style.display = "inline-block";
+            pasteBtn.style.display = "none";
+        } else {
+            clearBtn.style.display = "none";
+            pasteBtn.style.display = "inline-block";
+        }
+    }
+
+    function clearText() {
+        document.getElementById("textInput").value = "";
+        toggleButtons();
+    }
+
+    function pasteText() {
+        function pasteText() {
+            var textInput = document.getElementById("textInput");
+            var pasteBtn = document.getElementById("pasteBtn");
+
+            textInput.addEventListener('input', function () {
+                if (textInput.value !== "") {
+                    pasteBtn.style.display = "inline-block";
+                } else {
+                    pasteBtn.style.display = "inline-block";
+                }
+            });
+        }
+    }
+</script>
+<!-- *********************************** -->
+
+</html>
