@@ -141,6 +141,7 @@ p {
   padding: 2.5rem 2rem;
   border-radius: 20px;
   height: 270px;
+  margin: 0 0.8rem;
 }
 .Features_col3 {
   background: #fff9f0 !important;
@@ -159,6 +160,7 @@ p {
   padding: 2.5rem 2rem;
   border-radius: 20px;
   height: 270px;
+  margin: 0 0.8rem;
 }
 .Features h3 {
   font-size: 30px;
@@ -455,7 +457,6 @@ p {
   /* ********************** */
 }
 /* ********************** */
-
 
 /* buttons */
 .li4-btn {
