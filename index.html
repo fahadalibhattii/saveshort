@@ -122,48 +122,36 @@
                                                         p-id="9724"></path>
                                                 </g>
                                             </svg> Clear</button>
-                                        <button class="border-0 btn2" type="button">Download</button>
+                                        <button class="border-0 btn2" type="button" onclick="toggleSpinner()"
+                                            id="download-btn">
+                                            Download <span id="spinner" class="spinner-border spinner-border-sm"
+                                                role="status" aria-hidden="true"></span>
+                                        </button>
+
+                                        <!-- Toast Code  -->
+
+                                        <div class="position-fixed top-0 mt-md-0 mt-5 pt-md-0 pt-5 end-0 p-3 z-index-3">
+                                            <div id="kt_docs_toast_toggle" class="toast" role="alert"
+                                                aria-live="assertive" aria-atomic="true">
+                                                <div class="toast-header">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/1008/1008928.png"
+                                                        alt="" class="img-fluid pe-2" width="30px">
+                                                    <strong class="me-auto">SaveShort</strong>
+                                                    <small>2 sec ago</small>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="toast-body bg-dark">
+                                                    <p>This is an invalid URL error. Please Check URL.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::Toast-->
                                     </div>
                                 </div>
                                 <!-- ********************** -->
                             </div>
-                            <!-- ********************** -->
-                            <!-- <div class="hero_input2 w-100 d-block d-block d-md-none">
-                                <div class="input-group bg-white">
-                                    <input type="text" id="textInput" class="form-control me-2 border-0 hero_input ps-4"
-                                        placeholder="Insert Instagram link here" oninput="toggleButtons()">
-                                    <button class="border-0 btn1" type="button" id="pasteBtn"><svg viewBox="0 0 24 24"
-                                            fill="none" class="sgv1" xmlns="http://www.w3.org/2000/svg"
-                                            stroke="#333333">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke="#CCCCCC" stroke-width="0.144"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M12 0C11.2347 0 10.6293 0.125708 10.1567 0.359214C9.9845 0.44429 9.82065 0.544674 9.68861 0.62717L9.59036 0.688808C9.49144 0.751003 9.4082 0.803334 9.32081 0.853848C9.09464 0.984584 9.00895 0.998492 9.00053 0.999859C8.99983 0.999973 9.00019 0.999859 9.00053 0.999859C7.89596 0.999859 7 1.89543 7 3H6C4.34315 3 3 4.34315 3 6V20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V6C21 4.34315 19.6569 3 18 3H17C17 1.89543 16.1046 1 15 1C15.0003 1 15.0007 1.00011 15 1C14.9916 0.998633 14.9054 0.984584 14.6792 0.853848C14.5918 0.80333 14.5086 0.751004 14.4096 0.688804L14.3114 0.62717C14.1793 0.544674 14.0155 0.44429 13.8433 0.359214C13.3707 0.125708 12.7653 0 12 0ZM16.7324 5C16.3866 5.5978 15.7403 6 15 6H9C8.25972 6 7.61337 5.5978 7.26756 5H6C5.44772 5 5 5.44772 5 6V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V6C19 5.44772 18.5523 5 18 5H16.7324ZM11.0426 2.15229C11.1626 2.09301 11.4425 2 12 2C12.5575 2 12.8374 2.09301 12.9574 2.15229C13.0328 2.18953 13.1236 2.24334 13.2516 2.32333L13.3261 2.37008C13.43 2.43542 13.5553 2.51428 13.6783 2.58539C13.9712 2.75469 14.4433 3 15 3V4H9V3C9.55666 3 10.0288 2.75469 10.3217 2.58539C10.4447 2.51428 10.57 2.43543 10.6739 2.37008L10.7484 2.32333C10.8764 2.24334 10.9672 2.18953 11.0426 2.15229Z"
-                                                    fill="#333333"></path>
-                                            </g>
-                                        </svg> Paste</button>
-                                    <button class="border-0 btn1" type="button" id="clearBtn" onclick="clearText()">
-                                        <svg fill="#000000" viewBox="0 0 1024 1024" t="1569683368540" class="sgv1"
-                                            version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9723"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                stroke-linejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <defs>
-                                                    <style type="text/css"></style>
-                                                </defs>
-                                                <path
-                                                    d="M899.1 869.6l-53-305.6H864c14.4 0 26-11.6 26-26V346c0-14.4-11.6-26-26-26H618V138c0-14.4-11.6-26-26-26H432c-14.4 0-26 11.6-26 26v182H160c-14.4 0-26 11.6-26 26v192c0 14.4 11.6 26 26 26h17.9l-53 305.6c-0.3 1.5-0.4 3-0.4 4.4 0 14.4 11.6 26 26 26h723c1.5 0 3-0.1 4.4-0.4 14.2-2.4 23.7-15.9 21.2-30zM204 390h272V182h72v208h272v104H204V390z m468 440V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H416V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H202.8l45.1-260H776l45.1 260H672z"
-                                                    p-id="9724"></path>
-                                            </g>
-                                        </svg> Clear</button>
-                                </div>
-                                <button class="border-0 btn2 w-100 mt-3" type="button">Download</button>
-                            </div> -->
-                            <!-- ********************** -->
+
                         </div>
                         <div class="col-md-1"></div>
                     </div>
@@ -176,46 +164,46 @@
         <div class="container gx-0">
             <div class="row gx-0 gap-5 gap-md-0">
                 <div class="col-md-4">
-                    <div class="reeldowload1 px-2 mx-1 text-center">
+                    <div class="reeldowload1 px-2 mx-1 text-center position-relative">
                         <img src="./images/reel1.png" alt="" class="img-fluid">
                         <!-- <video class="w-100" autoplay loop muted>
                             <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
                         </video> -->
-                        <select class="form-select text-center" aria-label="Default select example">
-                            <option selected>1080x1080</option>
-                            <option value="1">500x500</option>
-                            <option value="2">250x250</option>
-                            <option value="3">100x100</option>
-                        </select>
 
                         <button class="border-0 btn3" type="button">Download</button>
                     </div>
-
                 </div>
                 <div class="col-md-4">
-                    <div class="reeldowload1 px-2 mx-1 text-center">
+                    <div class="reeldowload1 px-2 mx-1 text-center position-relative">
                         <img src="./images/reel1.png" alt="" class="img-fluid">
-                        <select class="form-select text-center" aria-label="Default select example">
-                            <option selected>1080x1080</option>
-                            <option value="1">500x500</option>
-                            <option value="2">250x250</option>
-                            <option value="3">100x100</option>
-                        </select>
                         <button class="border-0 btn3" type="button">Download</button>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="reeldowload1 px-2 mx-1 text-center">
+                    <div class="reeldowload1 px-2 mx-1 text-center position-relative">
                         <img src="./images/reel2.png" alt="" class="img-fluid">
-                        <select class="form-select text-center" aria-label="Default select example">
-                            <option selected>1080x1080</option>
-                            <option value="1">500x500</option>
-                            <option value="2">250x250</option>
-                            <option value="3">100x100</option>
-                        </select>
-                        <button class="border-0 btn3" type="button">Download</button>
+                        <button class="border-0 btn3" type="button" id="Download"
+                            onclick="DownloadMore()">Download</button>
                     </div>
                 </div>
+                <div class="text-center pt-4">
+                    <a href="">
+                        <button class="border-0 btn btn-dark w-100 py-2" type="button" id="downloadmore" > <svg
+                                fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                stroke="#ffffff" width="25px" class="px-1">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>reload</title>
+                                    <path
+                                        d="M0 16q0-2.784 1.088-5.312t2.912-4.384 4.384-2.912 5.344-1.088q2.784 0 5.312 1.088t4.384 2.912 2.912 4.384 1.088 5.312h2.304q0.736 0 1.28 0.416t0.8 1.024 0.16 1.28-0.64 1.184l-4.576 4.576q-0.672 0.672-1.6 0.672t-1.632-0.672l-4.576-4.576q-0.512-0.512-0.608-1.184t0.128-1.28 0.8-1.024 1.312-0.416h2.272q0-2.464-1.216-4.576t-3.328-3.328-4.576-1.216-4.608 1.216-3.328 3.328-1.216 4.576 1.216 4.608 3.328 3.328 4.608 1.216q1.728 0 3.36-0.64l3.424 3.392q-3.136 1.824-6.784 1.824-2.816 0-5.344-1.088t-4.384-2.912-2.912-4.384-1.088-5.344z">
+                                    </path>
+                                </g>
+                            </svg> Download More
+                        </button>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
@@ -761,6 +749,26 @@
                 }
             });
         }
+    }
+    function toggleSpinner() {
+        var spinner = document.getElementById("spinner");
+        var downloadbtn = document.getElementById("download-btn");
+        spinner.style.display = "inline-block";
+        setTimeout(function () {
+            spinner.style.display = "none";
+            downloadbtn.innerHTML = "Done!";
+        }, 5000);
+    }
+    // Toast Js Code
+    const button = document.getElementById('download-btn');
+    const toastElement = document.getElementById('kt_docs_toast_toggle');
+    const toast = bootstrap.Toast.getOrCreateInstance(toastElement);
+    button.addEventListener('click', e => {
+        e.preventDefault();
+        toast.show();
+    });
+    function DownloadMore(){
+        var btn1 = document.getElementById("pasteBtn");
     }
 </script>
 <!-- *********************************** -->
