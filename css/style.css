@@ -79,6 +79,9 @@ p {
   padding: 4px;
   border-radius: 18px;
 }
+#spinner {
+  display: none;
+}
 .btn1,
 .btn2 {
   background: #cccccc;
@@ -303,11 +306,14 @@ p {
   font-weight: 800;
   color: #5c5c5c;
   height: 35px;
-  width: 100%;
+  width: 90%;
   border-radius: 10px !important;
   background: linear-gradient(180deg, #368bdb 0%, #074494 100%);
   color: #fff;
   opacity: 0.9;
+  position: absolute;
+  left: 18px;
+  bottom: 8px;
 }
 .form-select {
   margin: 0.8rem 0;
@@ -366,6 +372,9 @@ p {
     height: 50px;
     width: 100%;
     border-radius: 8px !important;
+  }
+  .btn3 {
+    left: 15px;
   }
   /* ********************** */
   .Hero {
