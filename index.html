@@ -182,13 +182,15 @@
                 <div class="col-md-4">
                     <div class="reeldowload1 px-2 mx-1 text-center position-relative">
                         <img src="./images/reel2.png" alt="" class="img-fluid">
-                        <button class="border-0 btn3" type="button" id="Download"
-                            onclick="DownloadMore()">Download</button>
+                        <div class="text-center">
+                            <button class="border-0 btn3" type="button" id="Download"
+                                onclick="DownloadMore()">Download</button>
+                        </div>
                     </div>
                 </div>
                 <div class="text-center pt-4">
                     <a href="">
-                        <button class="border-0 btn btn-dark w-100 py-2" type="button" id="downloadmore" > <svg
+                        <button class="border-0 btn btn-dark w-100 py-2" type="button" id="downloadmore"> <svg
                                 fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                 stroke="#ffffff" width="25px" class="px-1">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -767,7 +769,7 @@
         e.preventDefault();
         toast.show();
     });
-    function DownloadMore(){
+    function DownloadMore() {
         var btn1 = document.getElementById("pasteBtn");
     }
 </script>
