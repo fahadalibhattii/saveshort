@@ -376,6 +376,9 @@ p {
   .btn3 {
     left: 15px;
   }
+  .reeldowload1 img {
+    width: 100%;
+  }
   /* ********************** */
   .Hero {
     background-size: contain;
@@ -448,6 +451,15 @@ p {
   /* ********************** */
 }
 /* ********************** */
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .reeldowload1 img {
+    width: 100%;
+  }
+  .btn3 {
+    width: 93%;
+  }
+}
+/* ********************** */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   /* ********************** */
   .Feature_head h1 {
@@ -463,7 +475,16 @@ p {
   .Download button {
     width: 35% !important;
   }
+  .btn3 {
+    width: 85%;
+  }
   /* ********************** */
+}
+/* ********************** */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .btn3 {
+    width: 89% !important;
+  }
 }
 /* ********************** */
 
