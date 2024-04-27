@@ -377,7 +377,7 @@ p {
     left: 15px;
   }
   .btn4{
-    width:94%;
+    width:94% !important;
   }Ï
   .reeldowload1 img {
     width: 100%;
